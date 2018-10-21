@@ -1,0 +1,30 @@
+A)prosty przyk³ad
+
+f1=@(x, y, z)x*x+y+z*z-4
+f2=@(x, y, z)x+z-2
+f3=@(x, y, z)x*x+y*y-5
+J=@(x, y, z)[2*x, 1, 2*z;1, 0, 1; 2*x, 2*y, 0]
+x0=[0.1, 1, 0.1]
+WYNIK [1 2 1]
+
+
+c)
+f1=@(x, y, z)x*x+y*y+z*z-1
+f2=@(x, y, z)x*x+y*y-3
+f3=@(x, y, z)x+z-1
+J=@(x, y, z)[2*x, 2*y, 2*z; 2*x, 2*y, 0;1, 0, 1]
+x0=[0.1, 0.1, 0.1]
+kolejne wyniki norm(x-pX) nie zbiegaj¹ do 0, niezale¿nie od liczby iteracji
+=>brak rozwi¹zania
+
+
+b)
+f1=@(x, y, z)x*x+y*y+z*z-1
+f2=@(x, y, z)x*x+y*y-0.75
+f3=@(x, y, z)x+z-1
+J=@(x, y, z)[2*x, 2*y, 2*z; 2*x, 2*y, 0;1, 0, 1]
+x0=[-0.1, -0.1, 0.1]
+lub
+x0=[-0.1 0.1 0.1]
+rózne punkty startowe = ró¿ne wyniki, bo równianie ma wiecej ni¿ 1 rozwi¹zanie
+
