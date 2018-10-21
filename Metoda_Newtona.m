@@ -1,21 +1,21 @@
 function [ X ] = Metoda_Newtona( f1, f2, f3, J, x0, iMax, eps )
-% Funkcja rozwi¹zuj¹ca uk³ad 3 równañ nieliniowych postaci f1(x,y,z)=0,
-%  f2(x,y,z)=0, f3(x,y,z)=0 metod¹ Newtona.
+% Funkcja rozwiÄ…zujÄ…ca ukÅ‚ad 3 rÃ³wnaÅ„ nieliniowych postaci f1(x,y,z)=0,
+%  f2(x,y,z)=0, f3(x,y,z)=0 metodÄ… Newtona.
 
-% Dane wejœciowe:
+% Dane wejÅ›ciowe:
 %  f1, f2, f3 - funkcje zmiennych x, y, z
 %  J - jakobian np. J= @(x, y,z)[2*x 2*y 2*z; 2*x 2*y 0; 1 0 1];
-%  x0 - przybli¿enie pocz¹tkowe
+%  x0 - przybliÅ¼enie poczÄ…tkowe
 %  iMax - maksymalna liczba iteracji
-%  eps - dok³adnoœæ kolejnych przyblizen
-% Dane wyjœciowe:
-%  Wektor X=[x, y, z] bêd¹cy rozwi¹zanie uk³adu równañ.
+%  eps - dokÅ‚adnoÅ›Ä‡ kolejnych przyblizen
+% Dane wyjÅ›ciowe:
+%  Wektor X=[x, y, z] bÄ™dÄ…cy rozwiÄ…zanie ukÅ‚adu rÃ³wnaÅ„.
 
-X = x0; % przybli¿enie pocz¹tkowe
-pX = X; % poprzednie przybli¿enie (na pocz¹tku równe przybli¿eniu pocz¹tkowemu)
+X = x0; % przybliÅ¼enie poczÄ…tkowe
+pX = X; % poprzednie przybliÅ¼enie (na poczÄ…tku rÃ³wne przybliÅ¼eniu poczÄ…tkowemu)
 F = zeros(3, 1);
 i=0;
-%iter=zeros(iMax, 1);
+
 while ( (norm(X-pX) > eps && i<iMax) || i==0)
     i=i+1;
     iter(i)=norm(X-pX);
