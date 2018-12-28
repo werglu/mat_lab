@@ -4,4 +4,4 @@ Projetky wykonane w Matlab, o różnej tematyce.
 # 2. Interpolacja.
 # 3. Całkowanie numeryczne.
 # 4. Aproksymacja średniokwadratowa.
-
+# 5. Wartości własne i wektory własne macierzy.
